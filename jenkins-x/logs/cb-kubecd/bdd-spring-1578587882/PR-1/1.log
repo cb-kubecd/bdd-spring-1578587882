@@ -1,0 +1,254 @@
+
+Showing logs for build [32mcb-kubecd-bdd-spring-1578587882-vqfkh-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-m8vsp[0m
+{"level":"warn","ts":1578589731.2664607,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1578589731.2669425,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mcb-kubecd-bdd-spring-1578587882-vqfkh-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-8x7q2[0m
+{"level":"warn","ts":1578589732.1604974,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1578589732.1660326,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mcb-kubecd-bdd-spring-1578587882-vqfkh-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mcb-kubecd-bdd-spring-1578587882-vqfkh-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-cb-kubecd-bdd-spring-1578587882-86lsq[0m
+{"level":"warn","ts":1578589739.342944,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1578589740.486406,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/cb-kubecd/bdd-spring-1578587882.git @ master in path /workspace/source"}
+
+Showing logs for build [32mcb-kubecd-bdd-spring-1578587882-vqfkh-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:dac4528eb3c0f073cfa816c5d99647f2ea366140,1:5a56f938e048138e0898f86a05e3b1ccb55d6249
+DEBUG: ran git fetch --unshallow origin 5a56f938e048138e0898f86a05e3b1ccb55d6249: dac4528eb3c0f073cfa816c5d99647f2ea366140: in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard dac4528eb3c0f073cfa816c5d99647f2ea366140 in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge 5a56f938e048138e0898f86a05e3b1ccb55d6249 in 
+Merged SHA 5a56f938e048138e0898f86a05e3b1ccb55d6249 with commit message 'My first PR commit' into base branch master
+
+Showing logs for build [32mcb-kubecd-bdd-spring-1578587882-vqfkh-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-set-version[0m
+Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Xms10m -Xmx192m
+OpenJDK 64-Bit Server VM warning: If the number of processors is expected to increase from one, then you should configure the number of parallel GC threads appropriately using -XX:ParallelGCThreads=N
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< com.example:bdd-spring-1578587882 >------------------
+[INFO] Building demo 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- versions-maven-plugin:2.7:set (default-cli) @ bdd-spring-1578587882 ---
+[INFO] Searching for local aggregator root...
+[INFO] Local aggregation root: /workspace/source
+[INFO] Processing change of com.example:bdd-spring-1578587882:0.0.1-SNAPSHOT -> 0.0.0-SNAPSHOT-PR-1-1
+[INFO] Processing com.example:bdd-spring-1578587882
+[INFO]     Updating project com.example:bdd-spring-1578587882
+[INFO]         from version 0.0.1-SNAPSHOT to 0.0.0-SNAPSHOT-PR-1-1
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  21.346 s
+[INFO] Finished at: 2020-01-09T17:09:27Z
+[INFO] ------------------------------------------------------------------------
+
+Showing logs for build [32mcb-kubecd-bdd-spring-1578587882-vqfkh-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-mvn-install[0m
+Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Xms10m -Xmx192m
+OpenJDK 64-Bit Server VM warning: If the number of processors is expected to increase from one, then you should configure the number of parallel GC threads appropriately using -XX:ParallelGCThreads=N
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< com.example:bdd-spring-1578587882 >------------------
+[INFO] Building demo 0.0.0-SNAPSHOT-PR-1-1
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ bdd-spring-1578587882 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ bdd-spring-1578587882 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /workspace/source/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ bdd-spring-1578587882 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /workspace/source/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ bdd-spring-1578587882 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /workspace/source/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M1:test (default-test) @ bdd-spring-1578587882 ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.bddspring1578587882.DemoApplicationTests
+17:09:48.719 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+17:09:48.751 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+17:09:48.867 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.example.bddspring1578587882.DemoApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+17:09:48.927 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.bddspring1578587882.DemoApplicationTests], using SpringBootContextLoader
+17:09:48.940 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.bddspring1578587882.DemoApplicationTests]: class path resource [com/example/bddspring1578587882/DemoApplicationTests-context.xml] does not exist
+17:09:48.941 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.bddspring1578587882.DemoApplicationTests]: class path resource [com/example/bddspring1578587882/DemoApplicationTestsContext.groovy] does not exist
+17:09:48.942 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.bddspring1578587882.DemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+17:09:48.944 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.bddspring1578587882.DemoApplicationTests]: DemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:09:49.102 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.example.bddspring1578587882.DemoApplicationTests]
+17:09:49.244 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/workspace/source/target/classes/com/example/bddspring1578587882/DemoApplication.class]
+17:09:49.253 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.bddspring1578587882.DemoApplication for test class com.example.bddspring1578587882.DemoApplicationTests
+17:09:49.509 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.example.bddspring1578587882.DemoApplicationTests]: using defaults.
+17:09:49.517 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+17:09:49.549 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/TransactionDefinition]
+17:09:49.552 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+17:09:49.553 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@fba92d3, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@662b4c69, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@fa49800, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@71238fc2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2a54a73f, org.springframework.test.context.event.EventPublishingTestExecutionListener@16a0ee18, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3d6f0054, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@505fc5a4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5fbdfdcf, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4efc180e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@bd4dc25]
+17:09:49.606 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@6da21078 testClass = DemoApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@7fee8714 testClass = DemoApplicationTests, locations = '{}', classes = '{class com.example.bddspring1578587882.DemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@56de5251, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@769e7ee8, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@1ed1993a, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6af93788], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+17:09:49.653 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.2.RELEASE)
+
+2020-01-09 17:09:50.447  INFO 63 --- [           main] c.e.b.DemoApplicationTests               : Starting DemoApplicationTests on cb-kubecd-bdd-spring-1578587882-vqfkh-1-from-build-pack-ssfkh-p with PID 63 (started by root in /workspace/source)
+2020-01-09 17:09:50.461  INFO 63 --- [           main] c.e.b.DemoApplicationTests               : No active profile set, falling back to default profiles: default
+2020-01-09 17:09:58.440  INFO 63 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-09 17:10:00.652  INFO 63 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-01-09 17:10:00.928  INFO 63 --- [           main] c.e.b.DemoApplicationTests               : Started DemoApplicationTests in 11.223 seconds (JVM running for 14.104)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.18 s - in com.example.bddspring1578587882.DemoApplicationTests
+2020-01-09 17:10:01.730  INFO 63 --- [extShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.2:jar (default-jar) @ bdd-spring-1578587882 ---
+[INFO] Building jar: /workspace/source/target/bdd-spring-1578587882-0.0.0-SNAPSHOT-PR-1-1.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.2.2.RELEASE:repackage (repackage) @ bdd-spring-1578587882 ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ bdd-spring-1578587882 ---
+[INFO] Installing /workspace/source/target/bdd-spring-1578587882-0.0.0-SNAPSHOT-PR-1-1.jar to /home/jenkins/.mvnrepository/com/example/bdd-spring-1578587882/0.0.0-SNAPSHOT-PR-1-1/bdd-spring-1578587882-0.0.0-SNAPSHOT-PR-1-1.jar
+[INFO] Installing /workspace/source/pom.xml to /home/jenkins/.mvnrepository/com/example/bdd-spring-1578587882/0.0.0-SNAPSHOT-PR-1-1/bdd-spring-1578587882-0.0.0-SNAPSHOT-PR-1-1.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  35.609 s
+[INFO] Finished at: 2020-01-09T17:10:06Z
+[INFO] ------------------------------------------------------------------------
+
+Showing logs for build [32mcb-kubecd-bdd-spring-1578587882-vqfkh-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-skaffold-version[0m
+v1.0.1
+
+Showing logs for build [32mcb-kubecd-bdd-spring-1578587882-vqfkh-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image openjdk:8-jdk-slim    
+ERROR: logging before flag.Parse: E0109 17:10:07.804499      11 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E0109 17:10:07.807119      11 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+2020/01/09 17:10:07 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Error while retrieving image from cache: getting file info: stat /workspace/sha256:1ca54f9636c527ec05550bf9bdcbc10a86ab6c28381db73ac3411466055dd300: no such file or directory 
+[36mINFO[0m[0001] Downloading base image openjdk:8-jdk-slim    
+2020/01/09 17:10:08 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0002] cmd: EXPOSE                                  
+[36mINFO[0m[0002] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0002] Using files from context: [/workspace/source/pom.xml] 
+[36mINFO[0m[0002] Using files from context: [/workspace/source/target/bdd-spring-1578587882-0.0.0-SNAPSHOT-PR-1-1.jar] 
+[36mINFO[0m[0002] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0002] Taking snapshot of full filesystem...        
+[36mINFO[0m[0002] ENV PORT 8080                                
+[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0002] ENV CLASSPATH /opt/lib                       
+[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0002] EXPOSE 8080                                  
+[36mINFO[0m[0002] cmd: EXPOSE                                  
+[36mINFO[0m[0002] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0002] Using files from context: [/workspace/source/pom.xml] 
+[36mINFO[0m[0002] COPY pom.xml target/lib* /opt/lib/           
+[36mINFO[0m[0002] Taking snapshot of files...                  
+[36mINFO[0m[0002] Using files from context: [/workspace/source/target/bdd-spring-1578587882-0.0.0-SNAPSHOT-PR-1-1.jar] 
+[36mINFO[0m[0002] COPY target/*.jar /opt/app.jar               
+[36mINFO[0m[0002] Taking snapshot of files...                  
+[36mINFO[0m[0002] WORKDIR /opt                                 
+[36mINFO[0m[0002] cmd: workdir                                 
+[36mINFO[0m[0002] Changed working directory to /opt            
+[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0002] CMD ["java", "-XX:+UnlockExperimentalVMOptions", "-XX:+UseCGroupMemoryLimitForHeap", "-jar", "app.jar"] 
+[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
+2020/01/09 17:10:10 existing blob: sha256:8ec398bc03560e0fa56440e96da307cdf0b1ad153f459b52bca53ae7ddb8236d
+2020/01/09 17:10:10 existing blob: sha256:8e866b0959566a21a8fa7eb2f7f12da0d12aa3498d6c31bb25a6ede1fa632ac2
+2020/01/09 17:10:10 existing blob: sha256:e18af1784b1ff42bce5eb771c6fb00c06471e462db471e4821b42a75f99d1bee
+2020/01/09 17:10:10 existing blob: sha256:2af781a14d60d4ac7ef41ca3bed9787d5bc332e74f0b64183528b9ae196b6aa4
+2020/01/09 17:10:13 pushed blob: sha256:49ea21adf4a89f31758dc09f31275eacba586bb2d5ac4db0460cc9e1b2a534ed
+2020/01/09 17:10:14 pushed blob: sha256:adac3d03dbde7ecb694cfe2a87da2516638b5249091aad83ee85fd7470169b4c
+2020/01/09 17:10:15 pushed blob: sha256:6265428c3f7f5c78f038427ad4f32354ed836200d9dd2d40e1dc3d4d17d5ad16
+2020/01/09 17:10:16 gcr.io/jenkins-x-bdd3/bdd-spring-1578587882:0.0.0-SNAPSHOT-PR-1-1: digest: sha256:9def7969a8bc856811f358cd6978fbe7eabd923a019ac2883dfe1e420fc1740b size: 1244
+
+Showing logs for build [32mcb-kubecd-bdd-spring-1578587882-vqfkh-1[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mcb-kubecd-bdd-spring-1578587882-vqfkh-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-make-preview[0m
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-1-1/" Chart.yaml
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-1-1/" ../*/Chart.yaml
+sed -i -e "s|repository:.*|repository: gcr.io\/jenkins-x-bdd3\/bdd-spring-1578587882|" values.yaml
+sed -i -e "s/tag:.*/tag: 0.0.0-SNAPSHOT-PR-1-1/" values.yaml
+echo "  version: 0.0.0-SNAPSHOT-PR-1-1" >> requirements.yaml
+** step helm build
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Waiting for vault to be initialized and unsealed...
+Waiting for vault to be initialized and unsealed...
+Waiting for vault to be initialized and unsealed...
+Waiting for vault to be initialized and unsealed...
+Waiting for vault to be initialized and unsealed...
+Waiting for vault to be initialized and unsealed...
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+WARNING: No secrets found on "helm/repos" due: reading the secret "helm/repos" from vault: no secret "helm/repos" not found in vault
+Read credentials for https://storage.googleapis.com/chartmuseum.jenkins-x.io from vault helm/repos
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+WARNING: No secrets found on "helm/repos" due: reading the secret "helm/repos" from vault: no secret "helm/repos" not found in vault
+Read credentials for http://jenkins-x-chartmuseum:8080 from vault helm/repos
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+WARNING: No secrets found on "helm/repos" due: reading the secret "helm/repos" from vault: no secret "helm/repos" not found in vault
+Read credentials for http://chartmuseum.jenkins-x.io from vault helm/repos
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+
+Showing logs for build [32mcb-kubecd-bdd-spring-1578587882-vqfkh-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-preview[0m
+Creating a preview
+Created environment cb-kubecd-bdd-spring-1578587882-pr-1
+Namespace **-cb-kubecd-bdd-spring-1578587882-pr-1 created 
+expose:
+  Annotations:
+    helm.sh/hook: post-install,post-upgrade
+    helm.sh/hook-delete-policy: hook-succeeded
+  config:
+    domain: c**d4.bdd.jenkins-x.rocks
+    exposer: Ingress
+    http: "true"
+preview:
+  image:
+    repository: gcr.io/jenkins-x-bdd3/bdd-spring-1578587882
+    tag: 0.0.0-SNAPSHOT-PR-1-1
+
+
+Updating PipelineActivities cb-kubecd-bdd-spring-1578587882-pr-1-1 which has status Running
+WARNING: preview application http://bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks not available, error was Get http://bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks: dial tcp: lookup bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks on 10.19.240.10:53: no such host, delaying for: 1.050146921s
+WARNING: preview application http://bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks not available, error was Get http://bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks: dial tcp: lookup bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks on 10.19.240.10:53: no such host, delaying for: 2.123731972s
+WARNING: preview application http://bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks not available, error was Get http://bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks: dial tcp: lookup bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks on 10.19.240.10:53: no such host, delaying for: 2.458403445s
+WARNING: preview application http://bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks not available, error was Get http://bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks: dial tcp: lookup bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks on 10.19.240.10:53: no such host, delaying for: 3.806441792s
+WARNING: preview application http://bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks not available, error was Get http://bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks: dial tcp: lookup bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks on 10.19.240.10:53: no such host, delaying for: 6.567118239s
+WARNING: preview application http://bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks not available, error was Get http://bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks: dial tcp: lookup bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks on 10.19.240.10:53: no such host, delaying for: 6.190486398s
+WARNING: preview application http://bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks not available, error was Get http://bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks: dial tcp: lookup bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks on 10.19.240.10:53: no such host, delaying for: 5.84140762s
+WARNING: preview application http://bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks not available, error was Get http://bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks: dial tcp: lookup bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks on 10.19.240.10:53: no such host, delaying for: 14.204706135s
+WARNING: preview application http://bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks not available, error was Get http://bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks: dial tcp: lookup bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks on 10.19.240.10:53: no such host, delaying for: 37.773980375s
+WARNING: preview application http://bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks not available, error was Get http://bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks: dial tcp: lookup bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks on 10.19.240.10:53: no such host, delaying for: 55.738381144s
+WARNING: preview application http://bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks not available, error was Get http://bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks: dial tcp: lookup bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks on 10.19.240.10:53: no such host, delaying for: 1m4.921413071s
+WARNING: preview application http://bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks not available, error was Get http://bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks: dial tcp: lookup bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks on 10.19.240.10:53: no such host, delaying for: 1m15.104434734s
+WARNING: preview application http://bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks not available, error was Get http://bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks: dial tcp: lookup bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks on 10.19.240.10:53: no such host, delaying for: 48.630616573s
+Preview application is now available at: http://bdd-spring-1578587882.**-cb-kubecd-bdd-spring-1578587882-pr-1.c**d4.bdd.jenkins-x.rocks
+Waiting for vault to be initialized and unsealed...
+Waiting for vault to be initialized and unsealed...
+Waiting for vault to be initialized and unsealed...
+Waiting for vault to be initialized and unsealed...
+Waiting for vault to be initialized and unsealed...
+Waiting for vault to be initialized and unsealed...
+Waiting for vault to be initialized and unsealed...
+Waiting for vault to be initialized and unsealed...
